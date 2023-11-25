@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Live Polling</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">what is your Ice-Cream?</h1>
+    <canvas id="voteChart" style="height: 50vh; width: 100vw"></canvas>
+    <button onclick="vote(0)">Butter Scotch</button>
+    <button onclick="vote(1)">Vanilla</button>
+    <button onclick="vote(2)">Strawberry</button>
+    <button onclick="vote(3)">Chocolate</button>
+    <button onclick="vote(4)">Mango</button>
+
+    <!-- chat  -->
+    <div class="chat-container">
+      <div class="chat-header">Live Chat</div>
+      <div class="chat-messages">
+        <!-- <div class="message"></div> -->
+      </div>
+      <form class="chatForm">
+        <input
+          type="text"
+          placeholder="enter message"
+          class="chatFormInput"
+          name="msg"
+        />
+        <button class="chatFormButton">Send</button>
+      </form>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/main.js"></script>
+</html>
